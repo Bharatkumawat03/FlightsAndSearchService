@@ -41,7 +41,7 @@ class CityRepository{
             //for updating data in mysql we use the below approach
             const city = await City.findByPk(cityId);
             city.name = data.name;
-            await city.save;
+            await city.save();
             return city;
         } catch (error) {
             console.log("Something get wrong in the repository layer");
